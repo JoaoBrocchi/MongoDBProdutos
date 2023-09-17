@@ -1,18 +1,13 @@
-const{ MongoClient } = require("mongodb");
+const mongoose = require("mongoose")
 const dotenv = require("dotenv").config()
 
 
 const uri = process.env.URI
-const Client = new MongoClient(uri)
 
-async function run(){
-    try {
-        await Client.connect()
-        console.log("conectado com sucesso")
-    } catch (error) {
-        console.log("o Erro Foi :", error)
-    }
+
+async function main(){
+    await mongoose.connect(uri)
+    console.log("conectado com sucesso ao banco usando mongoose")
 }
-run()
-
-module.exports = Client
+main().catch(err => console.log("erro na conxexão"));
+module.exports = mongoose
