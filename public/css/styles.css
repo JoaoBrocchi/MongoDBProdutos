@@ -91,3 +91,11 @@ cursor: pointer;
     max-width: 100%;
     margin-bottom: 0.5em;
 }
+.product-page {
+    max-width: 250px;
+    margin-bottom: 1em;
+}
+.product-page p {
+    
+    margin-bottom: 1em;
+}

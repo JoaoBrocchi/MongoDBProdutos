@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended:true}))
 app.set("view engine", "ejs")
 
 app.use(express.static(path.join(__dirname, 'public')))
-app.use("/product",productsRouter)
+app.use("/products",productsRouter)
 
 app.listen(3000,(req,res)=>{
     console.log("agr foi")
